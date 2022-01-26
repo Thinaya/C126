@@ -44,8 +44,11 @@ function draw() {
     fill("lightseagreen");
     stroke("lightseagreen");
     ABC_status = ABC_song.isPlaying();
+    Believer_status = Believer.isPlaying();
     if(scoreLeftWrist > 0.2)
     {
+        fill("lightseagreen");
+    stroke("lightseagreen");
         circle(leftWristX, leftWristY, 20);
         Believer.stop();
         if(ABC_status == false)
@@ -55,8 +58,8 @@ function draw() {
                
         }
     }
-
-    Believer_status = Believer.isPlaying();
+    fill("#b6e08f");
+    stroke("#b6e08f");
     if(scoreRightWrist > 0.2)
     {
         circle(rightWristX, rightWristY, 20);
@@ -83,8 +86,4 @@ function play() {
     song.setVolume(1);
     song.rate(2)
     song.play();
-}
-
-function isPlaying() {
-    song
 }
